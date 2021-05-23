@@ -23,7 +23,7 @@
 
 
 <!-- Title -->
-<title>Atestate informatică</title>
+<title>Prezentare - Atestate informatică</title>
 
 <!-- Favicon -->
 <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
@@ -115,47 +115,37 @@
         </div>
     </div>
     <!-- End Header Area -->
-    <!-- Start Slider Area -->
-    <div class="slider-area ">
-        <div class="container-fluid p-0">
-            <div class="row no-gutters">
-                <div class="col-12">
-                    <div class="single-slider slider-bg-1 text-center">
-                        <div class="slider-inner">
-                        <canvas id="myCanvas" width="560" height="100"></canvas>
-                            <h5>În acest website veți regăsi cele mai de calitate atestate de informatică</h5>
-                                        <svg height="130" width="500">
-                                    <defs>
-                                      <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
-                                        <stop offset="0%" style="stop-color:rgb(0,0,0);stop-opacity:1" />
-                                        <stop offset="100%" style="stop-color:rgb(30,144,255); stop-opacity:1" />
-                                      </linearGradient>
-                                    </defs>
-                                    <ellipse cx="250" cy="70" rx="85" ry="55" fill="url(#grad1)" />
-                                    <text fill="#ffffff" font-size="45" font-family="Verdana" x="185" y="86">Hello!</text>
-                                  </svg>
-                        </div>
+
+    <!-- End We are Bemax Area -->
+
+    <!-- End Latest Project Area -->
+    <!-- Start Why Choose Us Area -->
+    <div id="prezentare" class="choose-us-area pt-70 pb-70" id="page">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center mb-70">
+                    <div class="section-title">
+                        <h4>Prezentare</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="video-img-thumbnail text-center">
+                        <a class="video-play" href="https://www.youtube.com/watch?v=8QjZuyvOh5o"><i class="far fa-play-circle"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="single-choose-item">
+                      
+                        <p>În videoclipul alăturat puteți observa cu câtă pasiune lucrăm pentru serviciile dvs.</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- End Slider Area -->
-    <!-- Start Hire Us Area -->
-    <div class="hire-us-area theme-bg js--sticky-menu">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-7 col-md-9 col-12">
-                    <div class="hire-us-content">
-                        <h6>Avem peste <span>50</span> de clienți mulțumiți de serviciile noastre!</h6> 
-                    </div>  
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End Hire Us Area -->
-   
-    <!-- End Footer Area -->
+    <!-- End Why Choose Us Area -->
+
     <!-- End Copyright Area -->
     <div class="copyright-area black-bg">
         <div class="container">

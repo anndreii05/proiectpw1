@@ -1,3 +1,9 @@
+<?php
+    $n1 = rand(1,9);
+    $n2 = rand(1,9);
+    $suma = $n1 + $n2;
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +14,7 @@
 
 
 <!-- Title -->
-<title>Atestate informatică</title>
+<title>Captcha gresit - Atestate informatică</title>
 
 <!-- Favicon -->
 <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
@@ -41,21 +47,7 @@
    <script src="assets/js/jquery-3.4.1.min.js"></script>
 
 </head>
-<body>
-    <div class="search-overlay"></div>
-    <!-- Search Modal -->
-    <div class="modal fade" id="search-modal">
-        <div class="modal-dialog">
-             <div class="modal-content">
-                 <form action="index.html" class="search-popup-wrapper">
-                     <input type="search" placeholder="Search here...">
-                     <i class="fas fa-search"></i>
-                 </form>
-             </div>
-         </div>
-     </div>
-     <!-- End Search Modal -->
-     
+<body>    
      <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
@@ -72,6 +64,9 @@
             <input type="text" style="width: 100%" id="username" name="username"><br><br>
             Parola:<br><!-- comment -->
             <input type="password" style="width: 100%" id="pass" name="password"><br><br>
+            <input type="hidden" name="correctsum" value="<?php echo $suma; ?>"/><!-- comment -->
+            <?php echo $n1.' + '.$n2.' = ?';?><br><!-- comment -->
+            <input type="text" style="width: 100%" id="pass" name="captcha"><br><br>
              Ține-mă minte: <input type="checkbox" name="rememberme" value="1"><br>
              <button type="button" class="btn btn-secondary" data-dismiss="modal">Închide</button>
              <button type="submit" class="btn btn-primary" name="submit">Logare</button>
@@ -87,8 +82,7 @@
                 <div class="row">
                     <div class="col-lg-3 col-6">
                         <div class="site-logo">
-                            <h2>Atestate informatică</h2>
-                            <a data-toggle="tooltip" title="Be-one" href="index.php"></a>
+                            <h2><a href="index.php">Atestate informatică</a></h2>
                         </div>
                     </div>
                     <div class="col-6 d-lg-none static text-right">
@@ -121,6 +115,8 @@
                         <div class="slider-inner">
                             <h2 style="color:white!important;">Captcha gresit!</h2>
                             <h5>Incearca din nou!</h5>
+                            <br><br><!-- comment -->
+                            <center><a href="index.php"><button type="button" class="btn btn-primary">Du-ma la pagina principala</button></a></center>
                         </div>
                     </div>
                 </div>

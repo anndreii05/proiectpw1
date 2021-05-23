@@ -23,7 +23,7 @@
 
 
 <!-- Title -->
-<title>Atestate informatică</title>
+<title>De ce noi - Atestate informatică</title>
 
 <!-- Favicon -->
 <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
@@ -115,47 +115,91 @@
         </div>
     </div>
     <!-- End Header Area -->
-    <!-- Start Slider Area -->
-    <div class="slider-area ">
-        <div class="container-fluid p-0">
-            <div class="row no-gutters">
-                <div class="col-12">
-                    <div class="single-slider slider-bg-1 text-center">
-                        <div class="slider-inner">
-                        <canvas id="myCanvas" width="560" height="100"></canvas>
-                            <h5>În acest website veți regăsi cele mai de calitate atestate de informatică</h5>
-                                        <svg height="130" width="500">
-                                    <defs>
-                                      <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
-                                        <stop offset="0%" style="stop-color:rgb(0,0,0);stop-opacity:1" />
-                                        <stop offset="100%" style="stop-color:rgb(30,144,255); stop-opacity:1" />
-                                      </linearGradient>
-                                    </defs>
-                                    <ellipse cx="250" cy="70" rx="85" ry="55" fill="url(#grad1)" />
-                                    <text fill="#ffffff" font-size="45" font-family="Verdana" x="185" y="86">Hello!</text>
-                                  </svg>
+
+    <!-- End Hire Us Area -->
+    <!-- Start We are Bemax Area -->
+    <div id="de-ce-noi" class="bemax-area gray-bg pt-65 pb-25">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center mb-70">
+                    <div class="section-title">
+                        <h4>De ce noi?</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-bemax-item d-flex">
+                        <div class="item-icon">
+                          <i class="fas fa-desktop"></i>
+                        </div>
+                        <div class="item-content">
+                            <h6><a href="#">Seriozitate</a></h6>
+                            <p>Punem pasiune în ceea ce facem. Datorită acesteia, avem mulți clienți mulțumiți din toată lumea.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-bemax-item d-flex">
+                        <div class="item-icon">
+                            <a href="#"><i class="far fa-gem"></i></a>
+                        </div>
+                        <div class="item-content">
+                            <h6><a href="#">Suport 24/7</a></h6>
+                            <p>În cazul unei mici erori apărute în cadrul atestatului dvs., oricând vă sărim în ajutor</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-bemax-item d-flex">
+                        <div class="item-icon">
+                            <a href="#"><i class="fas fa-bullhorn"></i></a>
+                        </div>
+                        <div class="item-content">
+                            <h6><a href="#">În ton cu moda</a></h6>
+                            <p>În fiecare zi postăm cele mai calitative produse. Fii cu ochii pe noi</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-bemax-item d-flex">
+                        <div class="item-icon">
+                            <a href="#"><i class="fas fa-tablet-alt"></i></a>
+                        </div>
+                        <div class="item-content">
+                            <h6><a href="#">Adaptabil pentru orice dispozitiv</a></h6>
+                            <p>Atestatele sunt create în așa fel încât să fie adaptate pentru orice dispozitiv.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-bemax-item d-flex">
+                        <div class="item-icon">
+                            <a href="#"><i class="fas fa-pencil-alt"></i></a>
+                        </div>
+                        <div class="item-content">
+                            <h6><a href="#">Punctualitate</a></h6>
+                            <p>În cazul în care apar probleme pe parcurs cu produsul dvs, stabilim un termen limită de comun acord, iar până atunci, problema e ca și rezolvată</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-bemax-item d-flex">
+                        <div class="item-icon">
+                            <a href="#"><i class="fas fa-comments"></i></a>
+                        </div>
+                        <div class="item-content">
+                            <h6><a href="#">Gratis</a></h6>
+                            <p>Toate produsele noastre sunt gratuite! Alege atestatul, spune-ne în ce clasă ești, de la ce școală ești, și al tău e!</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- End Slider Area -->
-    <!-- Start Hire Us Area -->
-    <div class="hire-us-area theme-bg js--sticky-menu">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-7 col-md-9 col-12">
-                    <div class="hire-us-content">
-                        <h6>Avem peste <span>50</span> de clienți mulțumiți de serviciile noastre!</h6> 
-                    </div>  
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End Hire Us Area -->
-   
-    <!-- End Footer Area -->
+    <!-- End We are Bemax Area -->
+    <!-- Start Latest Project Area -->
+    
     <!-- End Copyright Area -->
     <div class="copyright-area black-bg">
         <div class="container">

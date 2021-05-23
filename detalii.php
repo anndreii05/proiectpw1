@@ -4,6 +4,10 @@
         $sql="SELECT * FROM atestat WHERE ID='{$_GET['id']}'";
         $query=  mysqli_query($con,$sql)or die(mysqli_error($con));
         $row=mysqli_fetch_array($query);
+        
+    $n1 = rand(1,9);
+    $n2 = rand(1,9);
+    $suma = $n1 + $n2;
 ?>
 
 
@@ -64,10 +68,14 @@
       </div>
       <div class="modal-body">
           <form name="login" method="post" action="login.php">
-             Nume de utilizator:<br>
-             <input type="text" style="width: 100%" id="username" name="username"><br>
-             Parola:<br><!-- comment -->
-             <input type="password" style="width: 100%" id="pass" name="password"><br>
+            Nume de utilizator:<br>
+            <input type="text" style="width: 100%" id="username" name="username"><br><br>
+            Parola:<br><!-- comment -->
+            <input type="password" style="width: 100%" id="pass" name="password"><br><br>
+            <input type="hidden" name="correctsum" value="<?php echo $suma; ?>"/><!-- comment -->
+            <?php echo $n1.' + '.$n2.' = ?';?><br><!-- comment -->
+            <input type="text" style="width: 100%" id="pass" name="captcha"><br><br>
+             Ține-mă minte: <input type="checkbox" name="rememberme" value="1"><br>
              <button type="button" class="btn btn-secondary" data-dismiss="modal">Închide</button>
              <button type="submit" class="btn btn-primary" name="submit">Logare</button>
           </form>
@@ -82,7 +90,7 @@
                 <div class="row">
                     <div class="col-lg-3 col-6">
                         <div class="site-logo">
-                            <h2>Atestate informatică</h2>
+                            <h2><a href="index.php">Atestate informatică</a></h2>
                             <a data-toggle="tooltip" title="Be-one" href="index.php"></a>
                         </div>
                     </div>
@@ -92,12 +100,12 @@
                     <div class="col-lg-9 text-right d-none d-lg-block">
                         <nav class="menu-wrapper">
                             <ul class="main-menu" id="mobile-menu">
-                                <li class="active"><a href="index.php">Acasă</a></li>
-                                <li><a href="index.php#despre">Despre</a></li>
-                                <li><a href="index.php#portofoliu">Portofoliu</a></li>
-                                <li><a href="index.php#contact">Contact</a></li>
-                                <li class="search-trigger d-none d-lg-inline-block"><a href="javascript:void(0)"><i class="fas fa-search"></i></a>
-                                <li><a href="logout.php"><i class="fas fa-sign-out-alt"></i></a> </li>
+                                <li><a href="de-ce-noi.php">De ce noi?</a></li>
+                                <li><a href="produse.php">Produse</a></li>
+                                <li><a href="prezentare.php">Prezentare</a></li>
+                                <li><a href="contact.php">Contact</a></li>
+                                <li data-toggle="modal" data-target="#exampleModal"><a href="javascript:void(0)"><i class="fas fa-user-alt"></i></a>    
+                                </li>
                             </ul>
                         </nav>
                     </div>
@@ -133,86 +141,20 @@
                 
                 <br><br><br>
                 <input type="hidden" name="id" value="<?php echo $_GET['id']; ?>"/>
-                <center><a href="index.php"><button type="button" class="btn btn-primary">Du-ma la pagina principală</button></a></center>
+                <center><a href="produse.php"><button type="button" class="btn btn-primary">Înapoi</button></a></center>
             </form>
 
             <br><!-- comment -->
             
     </div>
-       
 
-    <!-- Start Footer Area -->
-    <footer class="footer-area pt-60 pb-60 black-bg" id="contact-us">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-md-6">
-                    <div class="footer-widget">
-                        <div class="footer-logo">
-                            <a href="index.html">Be-One </a>
-                        </div>
-                        <div class="footer-dec">
-                            <p>Be-one is a clean PSD theme suitable for corporate, You can customize it very easy to fit your needs, semper suscipit metus accumsan at. Nam luctus ac tortor eu</p>
-                        </div>
-                        <ul class="social-links">
-                            <li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-                            <li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
-                            <li><a href="#" target="_blank"><i class="fab fa-google-plus-g"></i></a></li>
-                            <li><a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="footer-widget">
-                        <div class="widget-title">
-                            <h6>Features</h6>
-                        </div>
-                        <ul class="footer-menu">
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">Our Story</a></li>
-                            <li><a href="#">Terms &and; Condition</a></li>
-                            <li><a href="#">Privacy Policy</a></li>
-                            <li><a href="#">Site Map</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="footer-widget">
-                        <div class="widget-title">
-                            <h6>Contact us</h6>
-                        </div>
-                        <div class="address-line">
-                            <p>Address: 379 5th Ave  New York, NYC 10018, United States</p>
-                            <p>Phone: <a href="tel:+112345 6999">+(112) 345 6999</a></p>
-                            <p>Fax: +(112) 345 8999</p>
-                            <p>Email: <a href="mailto:contact@be-one.com">contact@be-one.com</a></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="footer-widget">
-                        <div class="widget-title">
-                            <h6>Newsletter</h6>
-                        </div>
-                        <div class="newsletter-text">
-                            <p>Subscribe to Newsletters and Stay informed about our news and events</p>
-                        </div>
-                        <form action="index.html" class="newsletter-form">
-                            <input type="email" placeholder="Your email">
-                            <input class="btn newsletter-btn" type="submit" value="Subscribe">
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <!-- End Footer Area -->
     <!-- End Copyright Area -->
     <div class="copyright-area black-bg">
         <div class="container">
             <div class="row ">
                 <div class="col-12 text-center">
                     <div class="copyright-area ">
-                        <p>Copyright © 2021 Designed by <a href="https://www.wpfreecloud.com">wpfreecloud.com</a>. All rights reserved.</p>
+                        <p>Copyright © 2021 Designed Andrei P. All rights reserved.</p>
                     </div>
                 </div>
             </div>
@@ -242,6 +184,15 @@
 
    <!-- Main.js -->
    <script src="assets/js/main.js"></script>
+   
+      <script>
+function isKeyPressed(event) {
+  var x = document.getElementById("demo");
+  if (event.altKey) {
+    alert("De ce tot apesi tasta ALT? Cu ce ti-a gresit?")
+  }
+}
+</script>
 </body>
 </html>
 

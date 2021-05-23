@@ -1,4 +1,8 @@
 <?php
+    $n1 = rand(1,9);
+    $n2 = rand(1,9);
+    $suma = $n1 + $n2;
+
 session_start();
 $_SESSION["nume"]=$_POST["nume"];
 $_SESSION["prenume"]=$_POST["prenume"];
@@ -104,10 +108,14 @@ $date2->setMesaj($_SESSION["mesaj"]);
       </div>
       <div class="modal-body">
           <form name="login" method="post" action="login.php">
-             Nume de utilizator:<br>
-             <input type="text" style="width: 100%" id="username" name="username"><br>
-             Parola:<br><!-- comment -->
-             <input type="password" style="width: 100%" id="pass" name="password"><br>
+            Nume de utilizator:<br>
+            <input type="text" style="width: 100%" id="username" name="username"><br><br>
+            Parola:<br><!-- comment -->
+            <input type="password" style="width: 100%" id="pass" name="password"><br><br>
+            <input type="hidden" name="correctsum" value="<?php echo $suma; ?>"/><!-- comment -->
+            <?php echo $n1.' + '.$n2.' = ?';?><br><!-- comment -->
+            <input type="text" style="width: 100%" id="pass" name="captcha"><br><br>
+             Ține-mă minte: <input type="checkbox" name="rememberme" value="1"><br>
              <button type="button" class="btn btn-secondary" data-dismiss="modal">Închide</button>
              <button type="submit" class="btn btn-primary" name="submit">Logare</button>
           </form>
@@ -122,7 +130,7 @@ $date2->setMesaj($_SESSION["mesaj"]);
                 <div class="row">
                     <div class="col-lg-3 col-6">
                         <div class="site-logo">
-                            <h2>Atestate informatică</h2>
+                            <h2><a href="index.php">Atestate informatică</a></h2>
                             <a data-toggle="tooltip" title="Be-one" href="index.php"></a>
                         </div>
                     </div>
@@ -133,11 +141,12 @@ $date2->setMesaj($_SESSION["mesaj"]);
                         <nav class="menu-wrapper">
                             <ul class="main-menu" id="mobile-menu">
                                 <li class="active"><a href="index.php">Acasă</a></li>
-                                <li><a href="#despre">Despre</a></li>
-                                <li><a href="#portofoliu">Portofoliu</a></li>
-                                <li><a href="#contact">Contact</a></li>
-                                <li class="search-trigger d-none d-lg-inline-block"><a href="javascript:void(0)"><i class="fas fa-search"></i></a>
-                                <li data-toggle="modal" data-target="#exampleModal"><i class="fas fa-user-alt"></i> </li>
+                                <li><a href="de-ce-noi.php">De ce noi?</a></li>
+                                <li><a href="produse.php">Produse</a></li>
+                                <li><a href="prezentare.php">Prezentare</a></li>
+                                <li><a href="contact.php">Contact</a></li>
+                                <li data-toggle="modal" data-target="#exampleModal"><a href="javascript:void(0)"><i class="fas fa-user-alt"></i></a>    
+                                </li>
                             </ul>
                         </nav>
                     </div>
@@ -204,6 +213,15 @@ $date2->setMesaj($_SESSION["mesaj"]);
 
    <!-- Main.js -->
    <script src="assets/js/main.js"></script>
+      <script>
+function isKeyPressed(event) {
+  var x = document.getElementById("demo");
+  if (event.altKey) {
+    alert("De ce tot apesi tasta ALT? Cu ce ti-a gresit?")
+  }
+}
+</script>
+   
 </body>
 </html>
 

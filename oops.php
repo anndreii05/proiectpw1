@@ -1,3 +1,9 @@
+<?php
+    $n1 = rand(1,9);
+    $n2 = rand(1,9);
+    $suma = $n1 + $n2;
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -42,19 +48,7 @@
 
 </head>
 <body>
-    <div class="search-overlay"></div>
-    <!-- Search Modal -->
-    <div class="modal fade" id="search-modal">
-        <div class="modal-dialog">
-             <div class="modal-content">
-                 <form action="index.html" class="search-popup-wrapper">
-                     <input type="search" placeholder="Search here...">
-                     <i class="fas fa-search"></i>
-                 </form>
-             </div>
-         </div>
-     </div>
-     <!-- End Search Modal -->
+
      
      <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">

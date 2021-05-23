@@ -23,7 +23,7 @@
 
 
 <!-- Title -->
-<title>Atestate informatică</title>
+<title>Produse - Atestate informatică</title>
 
 <!-- Favicon -->
 <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
@@ -115,46 +115,56 @@
         </div>
     </div>
     <!-- End Header Area -->
-    <!-- Start Slider Area -->
-    <div class="slider-area ">
-        <div class="container-fluid p-0">
-            <div class="row no-gutters">
-                <div class="col-12">
-                    <div class="single-slider slider-bg-1 text-center">
-                        <div class="slider-inner">
-                        <canvas id="myCanvas" width="560" height="100"></canvas>
-                            <h5>În acest website veți regăsi cele mai de calitate atestate de informatică</h5>
-                                        <svg height="130" width="500">
-                                    <defs>
-                                      <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
-                                        <stop offset="0%" style="stop-color:rgb(0,0,0);stop-opacity:1" />
-                                        <stop offset="100%" style="stop-color:rgb(30,144,255); stop-opacity:1" />
-                                      </linearGradient>
-                                    </defs>
-                                    <ellipse cx="250" cy="70" rx="85" ry="55" fill="url(#grad1)" />
-                                    <text fill="#ffffff" font-size="45" font-family="Verdana" x="185" y="86">Hello!</text>
-                                  </svg>
-                        </div>
+
+    <!-- Start Latest Project Area -->
+    <div id="produse" class="latest-project-area black-bg pt-70 pb-70 nope" id="portfolio">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center mb-70">
+                    <div class="section-title">
+                        <h4>Produse</h4>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-    <!-- End Slider Area -->
-    <!-- Start Hire Us Area -->
-    <div class="hire-us-area theme-bg js--sticky-menu">
-        <div class="container">
+            <center>
+            <form name="search_form" method="post" action="search.php">
+            <p style="display:inline-block; color:white!important;">Caută: </p><input type="text" name="search_box" value=""/><!--  --><br>
+            <br>
+            <input class="btn btn-primary" type="submit" name="search" value="Caută"><!-- comment --><br><br>
+            </form><!-- comment -->
+                        
+            </center>
             <div class="row">
-                <div class="col-lg-7 col-md-9 col-12">
-                    <div class="hire-us-content">
-                        <h6>Avem peste <span>50</span> de clienți mulțumiți de serviciile noastre!</h6> 
-                    </div>  
-                </div>
+                        
+            <?php while($row=mysqli_fetch_array($query)){ 
+                echo '<div class="col-md-4">';
+                $imagine = $row['imagine'];
+                $nume = $row['nume'];
+                $categorie = $row['categorie'];
+                $id = $row['id'];
+                echo '<img style="max-width:100%; margin:auto; margin-bottom:10px;" src="'.$imagine.'">';
+                echo '<h3 style="color:white!important; text-align:center;"><a href="detalii.php?id='.$id.'">'.$nume.'</h3></a>'; 
+                echo '<center><i style="color:white!important; text-align:center!important; margin-top:-16px!important;">'.$categorie.'</i></center>';
+                echo '<br>';
+                echo '<br>';
+                echo '<br>';
+                echo '</div>';
+                echo '<br>';
+                echo '<br>';
+            } ?>
             </div>
+
+</div>
+            
         </div>
-    </div>
-    <!-- End Hire Us Area -->
-   
+
+    <!-- End Latest Project Area -->
+
+    <!-- End Why Choose Us Area -->
+
+    <!-- Start Footer Area -->
+
+
     <!-- End Footer Area -->
     <!-- End Copyright Area -->
     <div class="copyright-area black-bg">

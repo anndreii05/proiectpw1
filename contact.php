@@ -23,7 +23,7 @@
 
 
 <!-- Title -->
-<title>Atestate informatică</title>
+<title>Contact - Atestate informatică</title>
 
 <!-- Favicon -->
 <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
@@ -114,47 +114,74 @@
             </div>
         </div>
     </div>
-    <!-- End Header Area -->
-    <!-- Start Slider Area -->
-    <div class="slider-area ">
-        <div class="container-fluid p-0">
-            <div class="row no-gutters">
-                <div class="col-12">
-                    <div class="single-slider slider-bg-1 text-center">
-                        <div class="slider-inner">
-                        <canvas id="myCanvas" width="560" height="100"></canvas>
-                            <h5>În acest website veți regăsi cele mai de calitate atestate de informatică</h5>
-                                        <svg height="130" width="500">
-                                    <defs>
-                                      <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
-                                        <stop offset="0%" style="stop-color:rgb(0,0,0);stop-opacity:1" />
-                                        <stop offset="100%" style="stop-color:rgb(30,144,255); stop-opacity:1" />
-                                      </linearGradient>
-                                    </defs>
-                                    <ellipse cx="250" cy="70" rx="85" ry="55" fill="url(#grad1)" />
-                                    <text fill="#ffffff" font-size="45" font-family="Verdana" x="185" y="86">Hello!</text>
-                                  </svg>
-                        </div>
+
+
+        <div id="contact" class="bemax-area gray-bg pt-65 pb-25">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center mb-70">
+                    <div class="section-title">
+                        <h4>Contact</h4>
                     </div>
                 </div>
             </div>
+            <div class="row">
+               <div class="col-md-8">
+                   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2712.168259660577!2d27.570109115452574!3d47.174142125744844!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40cafb61af5ef507%3A0x95f1e37c73c23e74!2sUniversitatea%20Alexandru%20Ioan%20Cuza%20din%20Ia%C8%99i!5e0!3m2!1sro!2sro!4v1621364577780!5m2!1sro!2sro" width="80%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+               </div>
+               <div class="col-md-4">
+                   <form method="post" action="mesaj.php">
+                       Nume:*<br><input style="width: 100%" type="text" name="nume" required/><br><!-- comment -->
+                       Prenume:*<br><input style="width: 100%" type="text" name="prenume" required/><br><!-- comment -->
+                       Adresă de mail:*<br><input required style="width: 100%" type="text" name="mail"/><br><!-- comment -->
+                       Mesajul dvs.:*<br><textarea required style="width: 100%" name="mesaj"></textarea><br>
+                       <p>*Toate câmpurile sunt obligatorii!</p>
+                       <br>
+                       <center><button type="submit" name="submit" class="btn btn-primary">Trimite</button></center> 
+                   </form>
+               </div>
+            </div>
+            <br><br>
+            <div class="row">
+                <h4>În videoclipul următor puteți vedea și o prezentare a locației unde ne desfășurăm activitatea.</h4><!-- comment -->
+                
+                <div class="col-lg-6">
+                    <center>
+                    <video controls style="margin-left: auto; margin-right: auto; display: block;">
+                        <source src="assets/mp4/video.mp4" type="video/mp4">
+                    </video>
+                    </center>
+                </div>
+             
+            </div>
+            <br><!-- comment -->
+
+            <div class="row">
+
+                <audio controls style="margin: 0 auto; display: block;" autoplay>
+                    <source src="assets/mp3/bg.mp3" type="audio/mpeg">
+                </audio>
+
+            </div>
+
         </div>
     </div>
-    <!-- End Slider Area -->
-    <!-- Start Hire Us Area -->
-    <div class="hire-us-area theme-bg js--sticky-menu">
+    <!-- Start Footer Area -->
+
+        <div class="hire-us-area theme-bg js--sticky-menu">
         <div class="container">
             <div class="row">
                 <div class="col-lg-7 col-md-9 col-12">
                     <div class="hire-us-content">
-                        <h6>Avem peste <span>50</span> de clienți mulțumiți de serviciile noastre!</h6> 
+                        <h6>Apropo, hai si cu un like si share la pagina noastra!</h6> 
                     </div>  
+                </div>
+                <div class="col-md-3 text-right">
+                    <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&width=450&layout=standard&action=like&size=small&share=true&height=35&appId" width="450" height="35" style="border:none;overflow:hidden; color:white!important;" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
                 </div>
             </div>
         </div>
     </div>
-    <!-- End Hire Us Area -->
-   
     <!-- End Footer Area -->
     <!-- End Copyright Area -->
     <div class="copyright-area black-bg">

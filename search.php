@@ -7,6 +7,10 @@
         $sql.="OR categorie='{$search_term}'";
     }
     $query = mysqli_query($con,$sql) or die(mysqli_error($con));
+    
+        $n1 = rand(1,9);
+    $n2 = rand(1,9);
+    $suma = $n1 + $n2;
     ?>
 
 <!DOCTYPE>
@@ -67,9 +71,13 @@
       <div class="modal-body">
           <form name="login" method="post" action="login.php">
             Nume de utilizator:<br>
-             <input type="text" style="width: 100%" id="username" name="username"><br>
-             Parola:<br><!-- comment -->
-             <input type="password" style="width: 100%" id="pass" name="password"><br>
+            <input type="text" style="width: 100%" id="username" name="username"><br><br>
+            Parola:<br><!-- comment -->
+            <input type="password" style="width: 100%" id="pass" name="password"><br><br>
+            <input type="hidden" name="correctsum" value="<?php echo $suma; ?>"/><!-- comment -->
+            <?php echo $n1.' + '.$n2.' = ?';?><br><!-- comment -->
+            <input type="text" style="width: 100%" id="pass" name="captcha"><br><br>
+             Ține-mă minte: <input type="checkbox" name="rememberme" value="1"><br>
              <button type="button" class="btn btn-secondary" data-dismiss="modal">Închide</button>
              <button type="submit" class="btn btn-primary" name="submit">Logare</button>
           </form>
@@ -94,12 +102,12 @@
                     <div class="col-lg-9 text-right d-none d-lg-block">
                         <nav class="menu-wrapper">
                             <ul class="main-menu" id="mobile-menu">
-                                <li class="active"><a href="#">Acasă</a></li>
-                                <li><a href="#despre">Despre</a></li>
-                                <li><a href="#portofoliu">Portofoliu</a></li>
-                                <li><a href="#contact">Contact</a></li>
-                                <li class="search-trigger d-none d-lg-inline-block"><a href="javascript:void(0)"><i class="fas fa-search"></i></a>
-                                <li><a href="logout.php"><i class="fas fa-sign-out-alt"></i></a></li>
+                                <li><a href="de-ce-noi.php">De ce noi?</a></li>
+                                <li><a href="produse.php">Produse</a></li>
+                                <li><a href="prezentare.php">Prezentare</a></li>
+                                <li><a href="contact.php">Contact</a></li>
+                                <li data-toggle="modal" data-target="#exampleModal"><a href="javascript:void(0)"><i class="fas fa-user-alt"></i></a>    
+                                </li>
                             </ul>
                         </nav>
                     </div>
